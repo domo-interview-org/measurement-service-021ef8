@@ -25,3 +25,11 @@ the visit must still be billed exactly once.
 
 A customer reports that a night visit on 29 March 2026, from 01:30 to 03:30, was billed for 120
 minutes. The nurse was there for 60.
+
+## Step 4 · Corrections
+
+A coordinator corrects the end time of a visit that was already billed. A `VisitCorrected` event
+arrives, with the same `visitId` and a higher `version`.
+
+Invoice lines are sent to the insurer by a separate monthly run. Once a line has been sent, it
+must never change. Nothing in the code records that a line was sent yet: decide how.
