@@ -33,3 +33,7 @@ arrives, with the same `visitId` and a higher `version`.
 
 Invoice lines are sent to the insurer by a separate monthly run. Once a line has been sent, it
 must never change. Nothing in the code records that a line was sent yet: decide how.
+
+## Step 5 · More consumers
+
+We now run the consumer with 8 threads. The same event can be processed twice at the same moment.
